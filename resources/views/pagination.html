@@ -1,0 +1,38 @@
+<div class="content-div" ng-if="paginate.from == null">
+    <ul class="list-unstyled margin-tp10 ">
+        <li class="margin-bt10 text-center">
+            <b id="no_data_msg">
+                No data available
+            </b>
+        </li>
+    </ul>
+</div>
+<!--=================================================-->
+<div class="content-div">
+    <div class="pagination-div text-right" ng-if="paginate.from != null">
+        Showing [[ paginate.from ]] to [[ paginate.to ]] of [[ paginate.total ]] records
+        <div class="number-div">
+            <ul>
+                <li class="prev" ng-class="{disabled: currentpage == 1}">
+                    <a href="javascript:;" ng-click="like({page :currentpage-1})">
+                        <span>
+                            ←
+                        </span>
+                    </a>
+                </li>
+                <li ng-class="{active : currentpage == i}" ng-repeat="i in range">
+                    <a href="javascript:;" ng-click="like({page :i})">
+                        [[i]]
+                    </a>
+                </li>
+                <li class="next" ng-class="{disabled: currentpage == paginate.last_page}">
+                    <a class="" href="javascript:;" ng-click=" currentpage != paginate.last_page ? like({page :currentpage+1}) : '' " ng-disabled="currentpage == paginate.last_page">
+                        <span>
+                            →
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

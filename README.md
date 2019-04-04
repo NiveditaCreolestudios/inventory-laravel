@@ -1,1 +1,1 @@
-# inventory-laravel
+# inventory_crud
