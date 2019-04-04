@@ -49,7 +49,7 @@
                         </tbody>
                     </table>
                 </div>
-                <default-pagination currentpage="currentPaging" like="InventoryData({searchTerm},page)" paginate="paginate" range="rangepage"></default-pagination>
+                <default-pagination currentpage="currentPaging" like="InventoryData(searchTerm,page)" paginate="paginate" range="rangepage"></default-pagination>
             </div>
         </div>
     </div>
